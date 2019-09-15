@@ -1,4 +1,4 @@
-FROM balenalib/%%RESIN_MACHINE_NAME%%-ubuntu:bionic-build
+FROM balenalib/%%RESIN_MACHINE_NAME%%-debian:buster-build
 MAINTAINER Moritz Ulmer <moritz.ulmer@posteo.de>
 
 RUN apt-get update && apt-get install -y \
