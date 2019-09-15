@@ -1,0 +1,16 @@
+version: '2'
+
+volumes:
+  mosquitto-data:
+  mosquitto-log:
+
+services:
+  mosquitto:
+    build: ./mosquitto
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - "mosquitto-data:/mosquitto/data"
+      - "mosquitto-log:/mosquitto/log"
